@@ -20,6 +20,8 @@ This project involves a deep-dive analysis of retail transaction data to uncover
 
 - Operational Efficiency: The 'Evening' shift consistently handles the highest volume of transactions, indicating a need for optimized staffing during these hours.
 
+<img src = "presentation image.png" alt="Banner image" width="1000"/>
+
 ## Script Structure & Key Features
 #### The SQL script is divided into three main operational phases:
 
