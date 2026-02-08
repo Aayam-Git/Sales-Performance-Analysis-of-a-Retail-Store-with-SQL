@@ -19,3 +19,35 @@ This project involves a deep-dive analysis of retail transaction data to uncover
 - Customer Loyalty: The top 5 customers contributed significantly to total sales, suggesting a need for a targeted retention program.
 
 - Operational Efficiency: The 'Evening' shift consistently handles the highest volume of transactions, indicating a need for optimized staffing during these hours.
+
+## Script Structure & Key Features
+#### The SQL script is divided into three main operational phases:
+
+1. Database Architecture
+- Environment Setup: Checks for the existence of retail_analytics_db and creates it if missing.
+- Table Definition: Defines the sales_transactions table using the columns listed above.
+
+2. Data Cleaning & Integrity
+- Null Value Audit: Scans critical fields (sale_date, customer_id, category, total_sale) for missing data.
+- Data Pruning: Automatically removes records with null values in essential columns to maintain statistical accuracy.
+
+3. Business Intelligence & Reporting
+
+- The script executes 10 strategic queries to answer key business questions:
+- Specific Date Audit: Performance check for specific high-traffic dates.
+- High-Volume Sales: Identification of bulk purchases (4+ items) in the Clothing category.
+- Category Revenue: Net revenue and order volume breakdown by product category.
+- Demographic Analysis: Average age of customers in the Beauty sector.
+- Premium Transactions: Isolation of high-value transactions (> $1000).
+- Gender Analysis: Purchasing patterns broken down by gender and category.
+- Seasonal Peaks: Identification of the highest-performing month for each year.
+- Customer Loyalty: Top 5 customers based on lifetime value (LTV).
+- Market Reach: Count of unique customers per product category.
+- Operational Shift Analysis: Distribution of orders across Morning, Afternoon, and Evening shifts.
+
+## Key SQL Concepts Used
+- Aggregations: SUM, AVG, COUNT
+- Window Functions: RANK() OVER (PARTITION BY ...) for year-over-year analysis.
+- Date Functions: DATEPART, FORMAT, YEAR, MONTH.
+- Conditional Logic: CASE statements for shift segmentation.
+- Type Conversion: CAST for precise decimal arithmetic.
